@@ -11,3 +11,11 @@ export async function createMovie(name: string, year: string, genreId: number) {
         },
     })
 }
+
+export async function deleteMovie(movieId: number) {
+	return await prisma.movie.delete({
+		where: {
+			id: movieId
+		},
+	})
+}

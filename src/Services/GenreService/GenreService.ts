@@ -8,3 +8,11 @@ export async function createGenre(genre: string) {
 		},
 	})
 }
+
+export async function deleteGenre(genreId: number) {
+	return await prisma.genre.delete({
+		where: {
+			id: genreId
+		},
+	})
+}
